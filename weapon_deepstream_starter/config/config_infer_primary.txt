@@ -1,0 +1,26 @@
+# TEMPLATE ONLY — validate against the target DeepStream SDK version.
+[property]
+gpu-id=0
+onnx-file=/ABSOLUTE/PATH/TO/WeaponDetection/best_nms_b2.onnx
+model-engine-file=/ABSOLUTE/PATH/TO/WeaponDetection/best_nms_b2_b2_gpu0_fp16.engine
+labelfile-path=/ABSOLUTE/PATH/TO/weapon_deepstream_starter/config/labels.txt
+
+batch-size=2
+network-mode=2
+network-type=0
+process-mode=1
+num-detected-classes=3
+infer-dims=3;640;640
+model-color-format=0
+net-scale-factor=0.003921568627
+maintain-aspect-ratio=0
+
+# NMS is embedded in this candidate ONNX export; disable additional clustering.
+# The custom parser must be compiled and installed first.
+custom-lib-path=/ABSOLUTE/PATH/TO/weapon_deepstream_starter/src/libnvdsinfer_custom_yolo_nms.so
+parse-bbox-func-name=NvDsInferParseCustomYoloNms
+output-blob-names=output0
+cluster-mode=4
+
+gie-unique-id=1
+interval=0

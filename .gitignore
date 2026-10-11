@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Model weights and exported models
+*.pt
+*.onnx
+*.engine
+
+# Large datasets and generated outputs
+dataset/
+runs/
+*.mp4
+*.avi
+*.csv
+
+# Notebook checkpoints
+.ipynb_checkpoints/

@@ -1,0 +1,17 @@
+# TEMPLATE ONLY — replace ROI coordinates with measured polygons from each camera.
+[property]
+enable=1
+config-width=1280
+config-height=720
+osd-mode=2
+display-font-size=12
+
+# Placeholder full-ish-frame ROI for stream 0; not production coordinates.
+[roi-filtering-stream-0]
+enable=1
+roi-gate-area=100;100;1180;100;1180;680;100;680
+class-id=-1
+inverse-roi=0
+
+# Add [roi-filtering-stream-1] with a separately measured polygon for camera 2.
+# Direction/line-crossing rules must be configured from actual scene geometry.
